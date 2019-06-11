@@ -1,0 +1,63 @@
+CREATE TABLE pacient(
+    id VARCHAR2(45) NOT NULL,
+    name VARCHAR2(45) NOT NULL,
+    surname VARCHAR2(45) NOT NULL,
+    birthday VARCHAR2(45) NOT NULL,
+    cnp VARCHAR2(45) NOT NULL,
+    dateIn VARCHAR2(45) NOT NULL,
+    dateEx VARCHAR(45) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE pacient_file(
+    id VARCHAR2(45) NOT NULL,
+    content VARCHAR(400) NOT NULL,
+    pacient_id VARCHAR2(45) NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY(pacient_id) REFERENCES pacient(id)
+);
+
+CREATE TABLE drug(
+    id VARCHAR2(45) NOT NULL,
+    name VARCHAR2(45) NOT NULL,
+    drugNumber INTEGER,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE event(
+    id VARCHAR2(45) NOT NULL,
+    name VARCHAR2(45) NOT NULL,
+    location VARCHAR2(45) NOT NULL,
+    startDate VARCHAR2(45) NOT NULL,
+    startTime VARCHAR2(45) NOT NULL,
+    pacientName VARCHAR2(45),
+    doctorUsername VARCHAR2(45),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE request(
+    id VARCHAR2(45) NOT NULL,
+    drugName VARCHAR2(45) NOT NULL,
+    cantity VARCHAR2(45),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE users(
+    username VARCHAR2(45) NOT NULL,
+    password VARCHAR2(45) NOT NULL,
+    role VARCHAR2(45) NOT NULL,
+    PRIMARY KEY (username)
+);
+
+DROP TABLE drug;
+DROP TABLE event;
+DROP TABLE request;
+DROP TABLE pacient;
+DROP TABLE pacient_file;
+
+select * from pacient;
+select * from pacient_file;
+select * from drug;
+select * from event;
+select * from request;
+select * from users;
