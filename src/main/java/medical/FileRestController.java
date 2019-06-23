@@ -54,6 +54,8 @@ public class FileRestController {
 
         File currentFile = fileService.findById(id);
 
+        currentFile.setContent(file.getContent());
+
         fileService.updateFile(currentFile);
         return new ResponseEntity<File>(currentFile, HttpStatus.OK);
     }

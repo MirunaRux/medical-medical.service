@@ -26,11 +26,11 @@ public class FileService {
     }
 
     public void updateFile(File File) {
-
         fileDao.update(File);
     }
 
     public File findById(String id) {
+        files = fileDao.getAllFiles();
         for (File file : files) {
             if (file.getId().equals(id)) {
                 return file;

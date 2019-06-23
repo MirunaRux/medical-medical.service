@@ -39,7 +39,7 @@ public class DrugRestController {
     @RequestMapping(value = "/drug/", method = RequestMethod.POST)
     public ResponseEntity<?> createDrug(@RequestBody Drug drug) {
         logger.info("Creating Drug : {}", drug);
-
+        System.out.println("drug ok");
         Drug newDrug = drugService.createDrug(drug);
 
         return new ResponseEntity<Drug>(newDrug, HttpStatus.OK);

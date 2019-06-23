@@ -42,7 +42,9 @@ public class UserDao {
     public void create(User user) {
         String insertSql = "INSERT INTO users (username, password, role) VALUES (?, ?, ?)";
         JdbcTemplate template = new JdbcTemplate(dataSource);
-
+        System.out.println(user.getUsername());
+        System.out.println(user.getPassword());
+        System.out.println(user.getRole());
         // define query arguments
         Object[] params = new Object[]{user.getUsername(), user.getPassword(), user.getRole()};
 

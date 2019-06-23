@@ -9,7 +9,7 @@ public class Pacient {
     private String dateIn;
     private String dateEx;
 
-    public Pacient(String id, String firstName, String lastName, String age, String cnp, String dateIn, String dateEx) {
+    public Pacient(String id, String firstName, String lastName, String birthday, String cnp, String dateIn, String dateEx) {
         this.id = id;
         this.name = firstName;
         this.surname = lastName;

@@ -15,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * It is generally recommended that you place @EnableAutoConfiguration in a root package so that all sub-packages and classes can be searched.
  */
 @SpringBootApplication
-public class Application {
+public class  Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

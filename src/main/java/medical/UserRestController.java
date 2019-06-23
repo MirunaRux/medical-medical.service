@@ -37,7 +37,8 @@ public class UserRestController {
     @RequestMapping(value = "/user/", method = RequestMethod.POST)
     public ResponseEntity<?> createUser(@RequestBody User user) {
         logger.info("Creating User : {}", user);
-
+        System.out.println("Ok");
+        System.out.println(user.getUsername());
         User newUser = userService.createUser(user);
 
         return new ResponseEntity<User>(newUser, HttpStatus.OK);

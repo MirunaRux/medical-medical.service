@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ojdbc7-12.1.0.2">
+    <CLASSES>
+      <root url="jar://$maven_repository$/com/oracle/ojdbc7/12.1.0.2/ojdbc7-12.1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -39,7 +39,7 @@ public class EventRestController {
     @RequestMapping(value = "/event/", method = RequestMethod.POST)
     public ResponseEntity<?> createEvent(@RequestBody Event event) {
         logger.info("Creating Event : {}", event);
-
+        System.out.println("Event create ok");
         Event newEvent = eventService.createEvent(event);
 
         return new ResponseEntity<Event>(newEvent, HttpStatus.OK);
